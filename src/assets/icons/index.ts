@@ -1,0 +1,12 @@
+export * as Home from './home.webp';
+export * as Chat from './chat.webp';
+export * as Cv from './cv.webp'
+export * as Ads from './ads.webp'
+export * as BriefCase from './briefcase.webp'
+export * as Notification from './notification.webp'
+export * as Payment from './payment.svg'
+export * as Save from './save.webp'
+export * as Search from './search.png'
+export * as Supplier from './supplier.webp'
+export * as Vc from './vc.webp'
+export * as Wallet from './wallet.png'

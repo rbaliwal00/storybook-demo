@@ -6,23 +6,22 @@ import { usePathname } from 'next/navigation';
 
 interface HeaderProps {
   primary?: boolean;
-  children: string | JSX.Element | JSX.Element[],
   logo:any;
   leftNavItems: any;
   rightNavItems: any;
+  backgroundColor?: string;
   platform?: any;
-  onLogin?: () => void;
-  onLogout?: () => void;
-  onCreateAccount?: () => void;
+  color?: string;
 }
 
-export const DesktopNavbar = ({children, logo, onLogin, onLogout, onCreateAccount, primary, leftNavItems, rightNavItems, platform }: HeaderProps) => {
+export const DesktopNavbar = ({ logo, primary, leftNavItems, rightNavItems, color, backgroundColor, platform }: HeaderProps) => {
   const mode = primary ? 'header--primary' : 'header--secondary';
 
   // const pathname = usePathname();
   
   return (
-    <header className={`header ${mode}`}>
+    <header className={`header ${mode}`} 
+      style={{backgroundColor: backgroundColor, color: color}}>
       <div className='logo-container'>
         <Image src={logo} width={100} height={100} alt="logo" className='logo'/> 
         <ul className='left-nav'>

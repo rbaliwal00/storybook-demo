@@ -5,7 +5,6 @@ import PrimaryLogo from '../assets/logo.svg';
 import SecondaryLogo from '../assets/logo-secondary.svg';
 
 const meta = {
-  title: 'Example/DesktopNavbar',
   component: DesktopNavbar,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -14,7 +13,7 @@ const meta = {
     layout: 'fullscreen',
   },
   args: {
-
+    
   },
 } satisfies Meta<typeof DesktopNavbar>;
 
@@ -37,19 +36,25 @@ export const primary: Story = {
       id: 1,
       type: "link",
       title: "Hire",
-      path: 'hire'
+      path: '/hire'
     },
     {
       id: 2,
       type: "link",
       title: "Become Supplier",
-      path: 'supplier'
+      path: '/supplier'
     },
     {
       id: 3,
       type: "link",
       title: "Job / Internship",
-      path: 'job'
+      path: '/job'
+    },
+    {
+      id: 4,
+      type: "link",
+      title: "Job / Internship",
+      path: '/job'
     }
   ],
     leftNavItems: [
@@ -63,10 +68,12 @@ export const primary: Story = {
             id: 1,
             type: "link",
             title: "Search Jobs",
+            path: "/search-jobs"
         },
         {
             id: 2,
             type: "link",
+            path: "/manage-jobs",
             title: "Manage Jobs",
         }
       ]
@@ -75,7 +82,7 @@ export const primary: Story = {
       id: 2,
       type: "link",
       title: "Learning",
-      path: 'learning'
+      path: '/learning'
     }
   ],
   },
@@ -90,19 +97,19 @@ export const secondary: Story = {
       id: 1,
       type: "link",
       title: "Hire",
-      path: 'hire'
+      path: '/hire'
     },
     {
       id: 2,
       type: "link",
       title: "Become Supplier",
-      path: 'supplier'
+      path: '/supplier'
     },
     {
       id: 3,
       type: "link",
       title: "Job / Internship",
-      path: 'job'
+      path: '/job'
     }
   ],
     leftNavItems: [
@@ -116,11 +123,13 @@ export const secondary: Story = {
             id: 1,
             type: "link",
             title: "Search Jobs",
+            path: "/search-jobs",
         },
         {
             id: 2,
             type: "link",
             title: "Manage Jobs",
+            path: "/manage-jobs",
         }
       ]
     },
@@ -128,7 +137,7 @@ export const secondary: Story = {
       id: 2,
       type: "link",
       title: "Learning",
-      path: 'learning'
+      path: '/learning'
     }
   ],
   },

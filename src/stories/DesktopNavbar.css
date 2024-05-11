@@ -55,13 +55,16 @@
 .nav-li{
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .dropdown-arrow{
     transform: rotate(180deg);
     display: block;
     margin-left: 6px;
-
+    position: absolute;
+    left: 32px;
+    top: -2px;
     font-weight: 700;
 }
 
@@ -87,5 +90,16 @@
 
     .nav-items li{
         padding: 0 0.6rem;
+    }
+
+    .nav-li{    
+        position: relative;
+    }
+
+    .dropdown-arrow{
+        position: absolute;
+        left: 18px;
+        top: -2px;
+        font-weight: 700;
     }
 }

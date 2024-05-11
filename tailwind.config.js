@@ -7,9 +7,10 @@ module.exports = {
  
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./*.html", "./ecommerce/*.html", "./assets/**/*.js"
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailgrids/plugin")],
 }
