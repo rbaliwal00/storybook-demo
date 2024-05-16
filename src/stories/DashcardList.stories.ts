@@ -45,7 +45,7 @@ export const JobSeekerDashboardList: Story = {
         title: "View Cv",
         banner: Cv,
         link: "/cv-create",
-        lastUpdated: '20/12/2023',
+        lastUpdated: new Date(),
         progress: '20'
       },
     {
@@ -53,7 +53,7 @@ export const JobSeekerDashboardList: Story = {
       title: "Visiting Card",
       banner: Vc,
       link: "/vc",
-      lastUpdated: '20/12/2023',
+      lastUpdated: new Date(),
     },
     {
         id: "3",

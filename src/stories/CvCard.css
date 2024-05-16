@@ -1,0 +1,46 @@
+.cv-card{
+    padding: 1.5rem 1rem;
+    box-shadow: 0.2rem 0.2rem 2rem rgba(243, 244, 246, 1);
+    border-radius: 1rem;
+    position: relative;
+}
+
+.heading-primary{
+    color: rgba(72, 72, 72, 1);
+    font-weight: 700;
+    line-height: 1.5rem;
+    font-size: 1.8rem;
+    /* letter-spacing: 2px; */
+    margin-top: 1rem;
+    margin-bottom: .2rem;
+}
+
+.heading-secondary{
+    color: rgba(72, 72, 72, 1);
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+.cv-stats{
+    color: #C1C1C1;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.edu-name-cgpa{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv-card-icon{
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+}
+
+.cv-type{
+    color: #FE8B4C;
+    font-size: 1.2rem;
+    font-weight: 300;
+}

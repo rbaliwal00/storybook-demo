@@ -1,31 +1,23 @@
-import { DevtoolsProvider } from "@providers/devtools";
-import { GitHubBanner, Refine } from "@refinedev/core";
-import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
-import { RefineSnackbarProvider, notificationProvider } from "@refinedev/mui";
-import routerProvider from "@refinedev/nextjs-router";
 import { Metadata } from "next";
 import { cookies } from "next/headers";
-import React, { Suspense } from "react";
+import React from "react";
+import PrimaryLogo from '../assets/logo.svg';
 
-import { ColorModeContextProvider } from "@contexts/color-mode";
-import { dataProvider } from "@providers/data-provider";
-import Dashcard from "@stories/Dashcard";
-
+import MobileFooter from "@stories/MobileNavbar";
 import {
   Ads,
   BriefCase,
   Chat,
   Cv,
-  Home,
   Notification,
   Payment,
   Save,
   Search,
   Supplier,
   Vc,
-  Wallet
+  Home
 } from "../assets/icons";
-import DashCardList from "@stories/DashcardList";
+import MobileNavbar from "@app/temp/MobileNavbar";
 
     const jobSeekerLinks = [
     {
@@ -137,17 +129,32 @@ export default function RootLayout({
   const theme = cookieStore.get("theme");
   const defaultMode = theme?.value === "dark" ? "dark" : "light";
 
-  const stat1 = {
-    id: "1",
-    count: 0,
-    title: 'Jobs'
-  }
-
-  const stat2 = {
-    id: "1",
-    count: 0,
-    title: 'Supplier'
-  }
+  const list = [
+    {
+      id: "1",
+      banner: Home,
+      title: "Home",
+      link: ""
+    },
+    {
+      id: "2",
+      banner: Save,
+      title: "Saved",
+      link: ""
+    },
+    {
+      id: "3",
+      banner: Notification,
+      title: "Notification",
+      link: ""
+    },
+    {
+      id: "4",
+      banner: Chat,
+      title: "Chat",
+      link: ""
+    }
+  ]
 
   return (
     <html lang="en">
@@ -173,7 +180,8 @@ export default function RootLayout({
             title="Saved"
             banner={Save}
           /> */}
-          <DashCardList dashCards={jobSeekerLinks} />
+          <MobileFooter list={list}/>
+          {/* <MobileNavbar title="Dashboard" rightNavbarList={list} logo={PrimaryLogo}/>   */}
       </body>
     </html>
   );

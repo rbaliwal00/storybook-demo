@@ -1,9 +1,9 @@
 .header{
-    font-size: 10px;
+    font-size: 0.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5rem;
+    height: 4rem;
     filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
     font-weight: 300;
 }
@@ -20,7 +20,7 @@
 
 .logo-container{
     display: flex;
-    font-size: 1rem;
+    
     align-items: center;
     width: 35%;
     justify-content: space-between;
@@ -37,7 +37,6 @@
 
 .nav-items{
     display: flex;
-    font-size: 1rem;
 }
 
 .nav-items li{
@@ -61,7 +60,7 @@
 .dropdown-arrow{
     transform: rotate(180deg);
     display: block;
-    margin-left: 6px;
+    margin-left: 2px;
     position: absolute;
     left: 32px;
     top: -2px;

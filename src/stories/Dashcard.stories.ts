@@ -24,7 +24,7 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    // layout: 'centered',
 
   },
   args: {
@@ -37,26 +37,28 @@ type Story = StoryObj<typeof meta>;
 
 export const JustTitleAndBanner: Story = {
   args: {
+    id:"1",
     banner: Payment,
     link: "/payment",
     title: 'Payment History',
-    width: '220px'
   }
 };
 
 export const LastUpdatedWithProgress: Story = {
   args: {
-    lastUpdated: '20/12/2022',
+     id:"1",
+    lastUpdated: new Date(),
     banner: Cv,
     link: "/payment",
     title: 'View Cv',
-    progress: "20"
+    progress: "90"
   },
 };
 
 export const LastUpdatedWithoutProgress: Story = {
   args: {
-    lastUpdated: '20/12/2022',
+     id:"1",
+    lastUpdated: new Date(),
     banner: Vc,
     link: "/payment",
     title: 'Visiting Card',
@@ -65,6 +67,7 @@ export const LastUpdatedWithoutProgress: Story = {
 
 export const OneStat: Story = {
   args: {
+     id:"1",
     banner: Ads,
     title: 'Post',
     link: "/payment",
@@ -77,6 +80,7 @@ export const OneStat: Story = {
 
 export const TwoStat: Story = {
   args: {
+     id:"1",
     banner: Save,
     title: 'Saved',
     link: "/payment",

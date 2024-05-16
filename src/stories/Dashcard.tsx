@@ -11,7 +11,7 @@ export type Stats = {
 
 export type DashcardProps = {
     id: string;
-    lastUpdated?: string,
+    lastUpdated?: Date,
     banner: any;
     progress?: string;
     title: string;
@@ -19,19 +19,32 @@ export type DashcardProps = {
     stat2?: Stats;
     dashcardWidth?: string;
     height?: string;
-    link: string;
+    link?: string;
+    platform?: string;
 }
 
-const Dashcard = ({lastUpdated,link, dashcardWidth, height, banner, progress, title, stat1, stat2} : DashcardProps) => {
+const formatDate = (date: Date): string => {
+    if(date){
+        let formatDate = new Date(date);
+        const day = formatDate.getUTCDate();
+        const month = formatDate.toLocaleString('default', { month: 'short' });
+        const year = formatDate.getFullYear();
+
+        return day + "/" + month + "/" + year;
+    }
+    return "";
+}
+
+const Dashcard = ({lastUpdated,link, dashcardWidth, height, banner, progress, title, stat1, stat2, platform} : DashcardProps) => {
     return (
         <Link href={link ? link: ""} className="dash-card" style={{width: `${dashcardWidth ? dashcardWidth : '200px'}`, 
             height: `${height ? height : '150px'}`}}>
             <div>
             {lastUpdated && <div className="dash-card-last-updated">
                 <div>Last Updated</div>
-                <div>{lastUpdated}</div>
+                <div className='dash-card-last-updated-date'>{formatDate(lastUpdated)}</div>
             </div>}
-            <Image src={banner} className='dash-card-image' alt='' width={100} height={100}/>
+            <Image src={banner} className='dash-card-image' alt='' height={72}/>
             {
                 stat1 && stat2 ?
                 <div className="stats" >
@@ -44,7 +57,7 @@ const Dashcard = ({lastUpdated,link, dashcardWidth, height, banner, progress, ti
                  {progress &&<> <div className='dash-card-progress-percentage'>
                     {progress}%</div><div className='dash-card-progress'>
                     <div className="dash-card-progress-line" 
-                        style={{width: '20%'}}></div>
+                        style={{width: `${progress}%`}}></div>
                 </div></>}
                 <div className='dash-card-title'>{title}</div>
             </div>

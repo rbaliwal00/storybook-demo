@@ -1,0 +1,39 @@
+.mobile-footer-container{
+    display: flex;
+    height: 3.75rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.6rem 0.8rem;
+    font-size: .833rem;
+    font-weight: 600;
+}
+
+/* .mobile-footer-title-active{
+    color: #FE8B4C;
+} */    
+
+.mobile-footer-title-active{
+    position: absolute; 
+    bottom: -1.5rem;
+}
+
+.mobile-footer-banner-active{
+    transform: translateY(-1.8rem);
+    transition: all .2s;
+}
+
+.mobile-navbar-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px){
+    .mobile-footer-container{
+        justify-content: space-between;
+        align-items: center;
+        color: #C1C1C1;
+    }
+}

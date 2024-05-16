@@ -10,3 +10,8 @@ export * as Search from './search.png'
 export * as Supplier from './supplier.webp'
 export * as Vc from './vc.webp'
 export * as Wallet from './wallet.png'
+export * as Back from './back.svg'
+export * as Gst from './gst-icon.svg'
+export * as TimeIcon from './time-icon.svg'
+export * as EyeIcon from './eye-icon.svg'
+export * as Dots from './dots-icon.svg';

@@ -1,0 +1,43 @@
+.topbar-container{
+    background-color: #113B73;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 5rem;
+}
+
+.topbar-back-button{
+    float: left;
+    display: flex;
+}
+
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.topbar-logo{
+    float: right;
+}
+
+.topbar-label{
+    margin-left: 1.5rem;
+    font-size: 1.44rem;
+}
+
+.topbar-progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+@media only screen and (max-width: 576px) {
+    .topbar-label{
+        margin-left: 1rem;
+    }
+}

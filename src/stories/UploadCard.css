@@ -1,0 +1,14 @@
+.upload-card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;   
+    align-items: center;
+    width: fit-content;
+}
+
+.upload-card-description{
+    font-size: 1rem;
+    width: fit-content;
+}

@@ -7,14 +7,16 @@ import { usePathname } from 'next/navigation';
 interface HeaderProps {
   primary?: boolean;
   logo:any;
+  logoHeight: number;
   leftNavItems: any;
   rightNavItems: any;
   backgroundColor?: string;
   platform?: any;
+  width: string;
   color?: string;
 }
 
-export const DesktopNavbar = ({ logo, primary, leftNavItems, rightNavItems, color, backgroundColor, platform }: HeaderProps) => {
+export const DesktopNavbar = ({ logo, logoHeight, primary, leftNavItems, rightNavItems, color, backgroundColor, platform }: HeaderProps) => {
   const mode = primary ? 'header--primary' : 'header--secondary';
 
   // const pathname = usePathname();
@@ -23,7 +25,7 @@ export const DesktopNavbar = ({ logo, primary, leftNavItems, rightNavItems, colo
     <header className={`header ${mode}`} 
       style={{backgroundColor: backgroundColor, color: color}}>
       <div className='logo-container'>
-        <Image src={logo} width={100} height={100} alt="logo" className='logo'/> 
+        <Image src={logo} height={logoHeight} alt="logo" className='logo'/> 
         <ul className='left-nav'>
           {leftNavItems.map((item:any) => {
             // const isActive = pathname.startsWith(item.path);
