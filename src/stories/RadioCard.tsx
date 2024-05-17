@@ -32,7 +32,7 @@ const RadioCard = ({label, backgroundColor, titleColor, buttons, icon, buttonLab
                     ))}
                 </div>
             </div>
-            {icon && <div className='radio-card-icon'><Image src={icon} alt="" height={iconHeight ? iconHeight : 60}/></div>}
+            {icon && <div className='radio-card-icon'><Image src={icon} alt="" height={iconHeight ? iconHeight : 70}/></div>}
         </div>
     );
 };
