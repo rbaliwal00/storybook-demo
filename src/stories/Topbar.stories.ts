@@ -2,8 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import Topbar from './Topbar';
-import { Back } from '@assets/icons';
-import PrimaryLogo from '../assets/logo.svg';
+import { Back, PrimaryLogo } from '@assets/icons';
 
 const meta = {
   component: Topbar,

@@ -1,0 +1,21 @@
+
+.preference-form-exp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.exp-margin-top{
+    margin-top: 2.5rem;
+}
+
+.exp-info-container{
+    position: relative;
+}
+
+.exp-info{
+    position: absolute;
+    color: white;
+    right: 1rem;
+    top: 1rem;
+}

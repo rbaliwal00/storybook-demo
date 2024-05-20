@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import DesktopNavbarLayout from './DesktopNavbarLayout';
-import {DesktopNavbar} from './DesktopNavbar';
 
 const meta = {
   title: 'Example/DesktopNavbarLayout',

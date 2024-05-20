@@ -20,7 +20,7 @@
 
 .radio-card-inputs{
     display: flex;
-    justify-content: space-between; 
+    justify-content: start; 
     gap: 3rem;
     align-items: center;
 }
@@ -37,9 +37,8 @@
     margin-bottom: 0.8rem;
 }
 
-.radio-card-icon{
-    margin-left: 2rem;
-    margin-right: 0.5rem;
+.radio-card-icon{   
+    margin-right: 2.5rem;
 }
 
 .btn-label{

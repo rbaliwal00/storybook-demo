@@ -7,7 +7,7 @@ const meta = {
   component: Button,
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered', 
+    layout: ' ', 
   },
   args: {
     
@@ -54,7 +54,6 @@ export const SecondaryKindSecondary: Story = {
   args: {
     type: 'secondary',
     kind: 'secondary',
-    color: "#113B73",
     onClick: action('Back button clicked')
   },
 };

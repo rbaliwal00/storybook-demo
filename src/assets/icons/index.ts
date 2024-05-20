@@ -15,3 +15,8 @@ export * as Gst from './gst-icon.svg'
 export * as TimeIcon from './time-icon.svg'
 export * as EyeIcon from './eye-icon.svg'
 export * as Dots from './dots-icon.svg';
+export * as OneDayJob from './one-day-job.svg';
+export * as GraduateIcon from './graduate-icon.svg';
+
+export * as PrimaryLogo from './logo.svg';
+export * as SecondaryLogo from './logo-secondary.svg';

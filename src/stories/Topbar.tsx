@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import './Topbar.css';
 
-type Props = {
+export type TopbarProps = {
     label?: string,
     logo?: any;
     button?: any;
@@ -12,28 +12,29 @@ type Props = {
     backgroundColor?: string;
     onBack?: () => void;
     progress?: string;
+    borderRadius?: number;
 }
 
-const Topbar = ({label,logo, button, logoHeight, color, backgroundColor, progress, onBack, platform}: Props) => {
+const Topbar = ({label,logo, button, logoHeight, color, backgroundColor, progress, onBack, borderRadius, platform}: TopbarProps) => {
 
     return (
         <header className='topbar-container clearfix' 
-            style={{backgroundColor, color}}>
+            style={{backgroundColor, color, borderRadius}}>
                 <div className='topbar-back-button'>
-                    <Image 
-                        src={button} alt=''
-                        className=''
-                        onClick={onBack}
-                    />
-                    <div className='topbar-label'>{label}</div>
+                    {button && <Image 
+                            src={button} alt=''
+                            className=''
+                            onClick={onBack}
+                        />}
+                    <div className={`topbar-label ${button && 'topbar-label-button'}`}>{label}</div>
                 </div>
-                <div className='topbar-logo'>
+                {logo && <div className='topbar-logo'>
                     <Image 
                         src={logo} alt=''
                         className=''
                         height={logoHeight ?? 30}
                     />
-                </div>
+                </div>}
                 <div className='topbar-progress'>
                     <div className='bg-stroke dark:bg-dark-3 relative h-1.5 w-full rounded-2xl'>
                         <div className='bg-[#FE8B4C] absolute top-0 left-0 h-full rounded-2xl' 

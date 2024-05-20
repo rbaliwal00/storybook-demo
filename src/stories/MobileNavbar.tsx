@@ -12,7 +12,7 @@ type Icon = {
     onClick?: () => void;
 }
 
-type Props = {
+export type MobileNavbarProps = {
     list: Icon[],
     platform?: string;
     color?: string;
@@ -20,7 +20,7 @@ type Props = {
     width?: string;
 }
 
-const MobileNavbar = ({list, color, backgroundColor, platform}: Props) => {
+const MobileNavbar = ({list, color, backgroundColor, platform}: MobileNavbarProps) => {
     const [active, setActive] = useState("2");
     return (
         <div className='mobile-footer-container' 

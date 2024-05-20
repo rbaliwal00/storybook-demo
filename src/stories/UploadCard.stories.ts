@@ -26,10 +26,7 @@ export const primary: Story = {
     backgroundColor: "#F3F4F6",
     color: "#8899A8",
     logo: Gst,
-    padding: '20px 30px',
     description: "Description",
-    buttonText: "Upload CTA",
-    buttonColor: "#113B73",
     onUpload: action('Upload Button Clicked')
   },
 };

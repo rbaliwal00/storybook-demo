@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 
 import { Dots } from '@assets/icons';
 import './CvCard.css';
+import Button from './Button';
 
 type Props = {
     fromDate?: Date;
@@ -36,12 +36,14 @@ const formatDate = (date: Date | undefined): string => {
 }
 
 const CvCard = ({fromDate, toDate, jobType, brandName, contact, email, education, department, position, subCategory, city, institution, cgpa, referenceName, awardTitle, onClick, platform}: Props) => {    
+    
     return (
             <div className='cv-card'>
-                {fromDate && <h3 className='heading-secondary'>
-                    <span>{formatDate(fromDate)}</span> -
-                    <span> {formatDate(toDate)}</span>
-                </h3>}
+                {(education || jobType) && <p className='heading-secondary'>
+                    {fromDate ? <span>{formatDate(fromDate)}</span> : <span className='cv-card-error'> From</span>} 
+                    {fromDate && toDate ?  <span > - </span> : <span className='text-red'> - </span>}
+                    {toDate ? <span>{formatDate(toDate)}</span> : <span className='cv-card-error'> To</span>}
+                </p>}
                 {jobType && <div className='cv-type'>{jobType}</div>}
                 {brandName && (referenceName || awardTitle ) ?  <h2 className='heading-secondary'>{brandName}</h2> : 
                     <h2 className='heading-primary'>{brandName}</h2>
@@ -76,9 +78,12 @@ const CvCard = ({fromDate, toDate, jobType, brandName, contact, email, education
                         src={Dots} alt='' 
                         height={20} 
                         className='cv-card-icon-img'
-                        
                         />
                 </div>
+                {(!fromDate || !toDate) && (<div className='cv-card-btn'>
+                    <p>Please fill in the missing information</p>
+                    <Button text='Complete Form' type='secondary'/>
+                </div>)}
             </div>
     );
 };

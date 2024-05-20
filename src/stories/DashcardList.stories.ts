@@ -1,21 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import PrimaryLogo from '../assets/logo.svg';
-import Dashcard from './Dashcard';
-import { DesktopNavbar } from './DesktopNavbar';
 
 import {
   Ads,
   BriefCase,
   Chat,
   Cv,
-  Home,
   Notification,
   Payment,
   Save,
   Search,
   Supplier,
-  Vc,
-  Wallet
+  Vc
 } from "../assets/icons";
 import DashCardList from './DashcardList';
 

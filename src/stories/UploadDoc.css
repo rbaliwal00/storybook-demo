@@ -1,0 +1,24 @@
+.upload-doc{
+    padding: .9rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: .625rem;
+}
+
+.upload-doc-title{
+    font-size: .833rem;
+    color: #637381;
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+}
+
+.upload-doc-label{
+    color: #8899A8;
+    font-weight: 400;
+}
+
+.upload-doc-btns{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}

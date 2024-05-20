@@ -1,5 +1,5 @@
 .cv-card{
-    padding: 1.5rem 1rem;
+    padding: .9rem .625rem;
     box-shadow: 0.2rem 0.2rem 2rem rgba(243, 244, 246, 1);
     border-radius: 1rem;
     position: relative;
@@ -9,7 +9,7 @@
     color: rgba(72, 72, 72, 1);
     font-weight: 700;
     line-height: 1.5rem;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     /* letter-spacing: 2px; */
     margin-top: 1rem;
     margin-bottom: .2rem;
@@ -18,13 +18,13 @@
 .heading-secondary{
     color: rgba(72, 72, 72, 1);
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: .8rem;
     line-height: 1.5rem;
 }
 
 .cv-stats{
     color: #C1C1C1;
-    font-size: 1.1rem;
+    font-size: .8rem;
     font-weight: 200;
 }
 
@@ -41,6 +41,21 @@
 
 .cv-type{
     color: #FE8B4C;
-    font-size: 1.2rem;
+    font-size: .8rem;
     font-weight: 300;
+}
+
+.cv-card-error{
+    color: #F23030;
+}
+
+.cv-card-btn{
+    margin-top: .4rem;
+    font-size: .8rem;
+    color: #F23030;
+    line-height: 1.25rem;
+}
+
+.cv-card-btn p{
+    margin-bottom: .2rem;
 }

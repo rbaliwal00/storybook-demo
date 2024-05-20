@@ -24,10 +24,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const education: Story = {
-
   args: { 
     fromDate: new Date(),
     toDate: new Date(),
+    education: "Masters",
+    institution: "ABC institution",
+    cgpa: "9.69",
+    onClick: action("Clicked Dots")
+  },
+};
+
+export const educationWithError: Story = {
+
+  args: { 
     education: "Masters",
     institution: "ABC institution",
     cgpa: "9.69",

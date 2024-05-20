@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import { DesktopNavbar } from './DesktopNavbar';
-import PrimaryLogo from '../assets/logo.svg';
-import SecondaryLogo from '../assets/logo-secondary.svg';
+import { PrimaryLogo, SecondaryLogo } from '@assets/icons';
 
 const meta = {
   component: DesktopNavbar,

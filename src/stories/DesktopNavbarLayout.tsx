@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { DesktopNavbar } from './DesktopNavbar';
-import PrimaryLogo from '../assets/logo.svg';
+import { PrimaryLogo } from '@assets/icons';
 
 type NavItem = {
   id: number;
