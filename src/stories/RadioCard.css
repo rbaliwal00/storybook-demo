@@ -9,7 +9,7 @@
     font-weight: bold;
     line-height: 1.1;
     height: 5.2rem;
-    box-shadow: 2rem 2rem 2rem rgba(243, 244, 246, 1);
+    box-shadow: rgba(0, 35, 81, 0.15) 0px 5px 25px;
     padding: 3rem 0rem;
     /* font-family: 'Poppins'; */
 }
@@ -68,4 +68,36 @@
     height: 100%;
     border-radius: 50%;
     background-color: transparent; /* Make the inside transparent */
+}
+
+@media only screen and (max-width: 576px) {
+    .radio-card{
+        font-size: 1rem;
+        padding: 1rem 0rem;
+    }
+
+    .radio-card-content{
+        padding: 1rem 1rem;
+    }
+
+    .radio-card-inputs{
+        gap: 1rem;
+    }
+
+    .radio-card-heading{
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .radio-card-icon{   
+        margin-right: .5rem;
+    }
+
+    .btn-label{
+        font-size: 0.8rem;
+    }
+
+    .radio-card-inputs input[type='radio'] {
+        margin-right: 0.3rem;
+    }
 }

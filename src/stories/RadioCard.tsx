@@ -14,9 +14,10 @@ export type RadioCardProps = {
     backgroundColor?: string;
     titleColor?: string;
     buttonLabelColor?: string;
+    platform: string;
 }
 
-const RadioCard = ({label, backgroundColor, titleColor, buttons, icon, buttonLabelColor, iconHeight}: RadioCardProps) => {
+const RadioCard = ({label, backgroundColor, titleColor, buttons, icon, buttonLabelColor, iconHeight, platform}: RadioCardProps) => {
     return (
         <div className='radio-card' style={{width: '100%', backgroundColor}}>
             <div className='radio-card-content'>
@@ -30,7 +31,7 @@ const RadioCard = ({label, backgroundColor, titleColor, buttons, icon, buttonLab
                     ))}
                 </div>
             </div>
-            {icon && <div className='radio-card-icon'><Image src={icon} alt="" height={90}/></div>}
+            {icon && <div className='radio-card-icon'><Image src={icon} alt="" height={70}/></div>}
             
         </div>
     );

@@ -6,7 +6,7 @@
     align-items: center;
     position: relative;
     height: 5rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 35, 81, 0.03) 0px 4px 15px;
 }
 
 .topbar-back-button{
@@ -41,6 +41,15 @@
 }
 
 @media only screen and (max-width: 576px) {
-    .topbar-label{  
+    .topbar-label{
+        font-size: 1.2rem;
+    }
+
+    .topbar-label-button{
+        margin-left: 0.7rem;
+    }
+
+    .topbar-progress{
+        padding: 1rem 1rem;
     }
 }

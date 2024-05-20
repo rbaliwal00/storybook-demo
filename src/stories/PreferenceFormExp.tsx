@@ -126,27 +126,29 @@ const PreferenceFormExp = ({platform}: any) => {
     return (    
         <div className='preference-form-exp'>
             {platform === 'web' && <div className='mb-10'><DesktopNavbar {...desktopNavbarProps}/></div>}
-            <div className='w-2/4 m-auto'>
-            {platform === 'web' && <Topbar {...webTopbarProps}/>}
-            {platform === 'mobile' && <Topbar {...mobileTopbarProps}/>}
-            <div className='exp-margin-top exp-info-container'>
-                <InfoOutlinedIcon className='exp-info' onClick={() => console.log('info')}/>
-                <RadioCard  {...radioCardProps1}/>
-            </div>
-            <div className='exp-margin-top'>
-                <RadioCard  {...radioCardProps2}/>
-            </div>
-            <div className='exp-margin-top'>
-                <UploadDoc {...uploadDocProps} />
-            </div>
-            <div className='flex justify-between exp-margin-top'>
-                <div className='w-[73%]'>
-                    <Button text='Confirm'/>
+            <div className='content'>
+                <div className='content-center'>
+                    {platform === 'web' && <Topbar {...webTopbarProps}/>}
+                    {platform === 'mobile' && <Topbar {...mobileTopbarProps}/>}
+                    <div className='exp-margin-top exp-info-container'>
+                        <InfoOutlinedIcon className='exp-info' onClick={() => console.log('info')}/>
+                        <RadioCard  {...radioCardProps1}/>
+                    </div>
+                    <div className='exp-margin-top'>
+                        <RadioCard  {...radioCardProps2}/>
+                    </div>
+                    <div className='exp-margin-top'>
+                        <UploadDoc {...uploadDocProps} />
+                    </div>
+                    <div className='flex justify-between exp-margin-top'>
+                        <div className='w-[73%]'>
+                            <Button text='Confirm'/>
+                        </div>
+                        <div className='w-[25%]'>
+                            <Button text='Back' kind='secondary'/>
+                        </div>
+                    </div>
                 </div>
-                <div className='w-[25%]'>
-                    <Button text='Back' kind='secondary'/>
-                </div>
-            </div>
             </div>
         </div>
     );
