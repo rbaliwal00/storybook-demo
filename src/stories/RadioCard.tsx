@@ -14,7 +14,7 @@ export type RadioCardProps = {
     backgroundColor?: string;
     titleColor?: string;
     buttonLabelColor?: string;
-    platform: string;
+    platform?: string;
 }
 
 const RadioCard = ({label, backgroundColor, titleColor, buttons, icon, buttonLabelColor, iconHeight, platform}: RadioCardProps) => {
